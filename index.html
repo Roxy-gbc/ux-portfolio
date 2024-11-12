@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roxy_Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入外部CSS文件 -->
+    <style>
+        .hero {
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            gap: 40px;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .hero .image {
+            width: 300px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .hero .text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 600px;
+        }
+
+        .my-info {
+            background-color: #D1C4FD;
+            padding: 10px 10%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .info-text p {
+            font-family: "sf pro rounded", sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .selected-work {
+            padding: 40px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .section-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .project-card {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+        }
+
+        .project-image {
+            flex: 2.5;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 13 / 10;
+            perspective: 1000px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center center;
+        }
+
+        .project-image:hover img {
+            transform: scale(1.1) translateZ(30px);
+            filter: brightness(1.05);
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .project-image:hover::after {
+            opacity: 1;
+        }
+
+
+        /* info */
+        .project-info {
+            margin: 2vw auto 2vw auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-date {
+            color: rgba(0, 0, 0, 0.50);
+            font-size: 15px;
+            margin-bottom: 5px;
+            font-family: "Balsamiq Sans Re", sans-serif;
+        }
+
+        .project-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-family: "Balsamiq Sans Re", sans-serif;
+            color: black;
+        }
+
+        .project-description {
+            font-size: 17px;
+            font-family: "Balsamiq Sans Re", sans-serif;
+            color: black;
+            line-height: 1.5;
+            margin-bottom: 2vw;
+            margin-top: 1vw;
+        }
+
+        .project-tags {
+            color: rgba(0, 0, 0, 0.60);
+            font-family: "Balsamiq Sans Re", sans-serif;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background-color: #f5f5f5;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .project-image {
+                flex: none;
+                width: 100%;
+            }
+
+            .project-info {
+                flex: none;
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="background">
+    <!-- nav -->
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="Port-imgs/my-loge.png" alt="Roxy Jiang Logo" />
+        </a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="image">
+            <img src="/Port-imgs/avatar.png" alt="Roxy Avatar">
+        </div>
+        <div class="text">
+            <hb1>Hi, I’m Roxy — a creator of intuitive, visually captivating designs that turn complex challenges into
+                effortless, enjoyable experiences for users.</hb1>
+        </div>
+    </section>
+
+    <section class="my-info">
+        <div class="info-text">
+            <p>3+ years Design Experience</p>
+            <p>UX, Visual Design, Front-end Development</p>
+        </div>
+
+        <div class="info-text">
+            <p>1+ year Front-end Experience</p>
+            <p>Creating User-Centric Solutions</p>
+        </div>
+
+        <div class="info-text">
+            <p>Based in Toronto</p>
+        </div>
+
+    </section>
+
+    <!-- Selected Work  -->
+    <section class="selected-work">
+        <!-- title -->
+        <div class="section-header">
+            <img src="/Port-imgs/work.svg" alt="Work Icon" class="section-icon">
+            <h3>Selected Work</h3>
+            <hr class="divider">
+        </div>
+
+        <!-- project list -->
+        <div class="projects-container">
+            <!-- work 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/Card-imgs/PetHood-hero.png" alt="Project 1 Image">
+                </div>
+                <div class="project-info">
+                    <div class="project-date">Spring 2022 • Client Project</div>
+                    <h1 class="project-title">Secret Garden</h1>
+                    <p class="project-description">
+                        Enhancing the user's online shopping experience while reinforcing the company's brand identity.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Website-Redesign</span>
+                        <span class="tag">Branding</span>
+                    </div>
+                    <a href="case-study1.html" class="view-more-button">View More</a>
+                </div>
+            </div>
+
+            <!-- 项目卡片2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/Card-imgs/Flower-hero.jpg" alt="Project 2 Image">
+                </div>
+                <div class="project-info">
+                    <div class="project-date">Spring 2022 • Client Project</div>
+                    <h1 class="project-title">Secret Garden</h1>
+                    <p class="project-description">
+                        Enhancing the user's online shopping experience while reinforcing the company's brand identity.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Website-Redesign</span>
+                        <span class="tag">Branding</span>
+                    </div>
+                    <a href="case-study2.html" class="view-more-button">View More</a>
+                </div>
+            </div>
+
+            <!-- 添加更多项目卡片 -->
+        </div>
+    </section>
+
+
+    <!-- Footer 区域 -->
+    <footer>
+        <!-- Back to Top 按钮 -->
+        <div class="back-to-top">
+            <img src="/path/to/background-image.png" alt="Background Icon" class="back-to-top-bg"> <!-- 替换为实际图片路径 -->
+            <a href="#top" class="back-to-top-btn">Back to Top</a>
+        </div>
+
+        <!-- "Let's Connect" 文本和分割线 -->
+        <div class="footer-connect">
+            <p>Let’s Connect</p>
+            <hr class="footer-divider">
+        </div>
+
+        <!-- Footer 内容 -->
+        <div class="footer-content">
+            <!-- 左边的图标和版权信息 -->
+            <div class="footer-left">
+                <img src="/path/to/icon.png" alt="Footer Icon" class="footer-icon"> <!-- 替换为实际图标路径 -->
+                <p>&copy; 2024 Roxy Jiang</p>
+            </div>
+
+            <!-- 右边的按钮 -->
+            <div class="footer-right">
+                <a href="/path/to/resume.pdf" class="footer-btn" target="_blank"> <!-- 替换为实际简历路径 -->
+                    <img src="/path/to/resume-icon.png" alt="Resume Icon"> <!-- 替换为实际简历图标路径 -->
+                    Resume
+                </a>
+                <a href="https://linkedin.com/in/your-linkedin" class="footer-btn" target="_blank">
+                    <!-- 替换为LinkedIn实际链接 -->
+                    <img src="/path/to/linkedin-icon.png" alt="LinkedIn Icon"> <!-- 替换为LinkedIn图标路径 -->
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
