@@ -1,69 +1,69 @@
 @font-face {
     font-family: "PipeDream";
-    src: url("/fonts/PipeDream-1Zwg.ttf") format("truetype");
+    src: url("./Fonts/PipeDream-1Zwg.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "PolygonParty";
-    src: url("/fonts/PolygonParty-3KXM.ttf") format("truetype");
+    src: url("./Fonts/PolygonParty-3KXM.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "SuperMarioBros";
-    src: url("/fonts/SuperMarioBros-ov7d.ttf") format("truetype");
+    src: url("./Fonts/SuperMarioBros-ov7d.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Balsamiq Sans Re";
-    src: url("/Fonts/BalsamiqSans/BalsamiqSans-Regular.ttf") format("truetype");
+    src: url("./Fonts/BalsamiqSans/BalsamiqSans-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Balsamiq Sans Bold";
-    src: url("/Fonts/BalsamiqSans/BalsamiqSans-Bold.ttf") format("truetype");
+    src: url("./Fonts/BalsamiqSans/BalsamiqSans-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Balsamiq Sans Italic";
-    src: url("/Fonts/BalsamiqSans/BalsamiqSans-Italic.ttf") format("truetype");
+    src: url("./Fonts/BalsamiqSans/BalsamiqSans-Italic.ttf") format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Balsamiq Sans Bold Italic";
-    src: url("/Fonts/BalsamiqSans/BalsamiqSans-BoldItalic.ttf") format("truetype");
+    src: url("./Fonts/BalsamiqSans/BalsamiqSans-BoldItalic.ttf") format("truetype");
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: "SF Pro Rounded Light";
-    src: url("/Fonts/SF-pro-Round/SF-Pro-Rounded-Light.otf") format("opentype");
+    src: url("./Fonts/SF-pro-Round/SF-Pro-Rounded-Light.otf") format("opentype");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "SF Pro Rounded Regular";
-    src: url("/Fonts/SF-pro-Round/SF-Pro-Rounded-Regular.otf") format("opentype");
+    src: url("./Fonts/SF-pro-Round/SF-Pro-Rounded-Regular.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "SF Pro Rounded Medium";
-    src: url("/Fonts/SF-pro-Round/SF-Pro-Rounded-Medium.otf") format("opentype");
+    src: url("./Fonts/SF-pro-Round/SF-Pro-Rounded-Medium.otf") format("opentype");
     font-weight: 500;
     font-style: normal;
 }
