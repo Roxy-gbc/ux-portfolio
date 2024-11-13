@@ -117,11 +117,12 @@ body {
 /* body */
 
 .background {
-    background-image: url('./Port-imgs/main-bg.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./Port-imgs/main-bg.png');
     background-repeat: repeat;
     background-size: 300px auto;
     z-index: -99;
 }
+
 
 * {
     margin: 0;
@@ -376,4 +377,108 @@ nav .logo:hover img {
 .view-more-button:hover {
     transform: translateY(-2px);
     transition: transform 0.8s ease;
+}
+
+/* 容器样式 */
+.back-to-top-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+/* Kirby容器样式 */
+.backtotop-kirby {
+    position: absolute;
+    right: -5px;
+    top: -20px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Kirby图片样式 */
+.kirby-image {
+    width: 45px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* 按钮样式 */
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px;
+    background: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #000;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+    /* 双层边框效果 */
+    box-shadow: 
+        0 0 0 2px #000,    /* 外层黑边 */
+        0 0 0 4px #FED403; /* 内层黄边 */
+    transition: transform 0.2s ease;
+}
+
+/* 隐藏的无障碍文本 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Hover效果 */
+.back-to-top:hover {
+    transform: translateY(-2px);
+}
+
+.back-to-top:hover + .backtotop-kirby .kirby-image {
+    transform: translateY(-3px);
+}
+
+/* 点击效果 */
+.back-to-top:active {
+    transform: translateY(1px);
+}
+
+/* 显示/隐藏动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-to-top-container {
+    animation: fadeIn 0.3s ease;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .back-to-top-container {
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    .back-to-top {
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+    
+    .kirby-image {
+        width: 35px;
+    }
 }

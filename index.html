@@ -30,8 +30,28 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            max-width: 600px;
+            position: relative;
         }
+
+        .highlight {
+            display: inline;
+            background-color: rgba(252, 244, 203, 0.4);
+            padding: 0 15px;
+            border-radius: 4px;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            z-index: 1;
+            border-radius: 5vw;
+        }
+
+
+        /* .hero .text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 600px;
+        } */
 
         .my-info {
             background-color: #D1C4FD;
@@ -51,7 +71,7 @@
             font-family: "sf pro rounded", sans-serif;
             font-weight: 400;
             font-size: 1rem;
-            line-height: 1.5;
+            line-height: 1.3;
         }
 
         .selected-work {
@@ -197,6 +217,17 @@
                 padding-right: 0;
             }
         }
+
+        /* 按钮容器 */
+        .back-to-top-container {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        
     </style>
 </head>
 
@@ -204,7 +235,7 @@
     <!-- nav -->
     <nav>
         <a href="index.html" class="logo">
-            <img src="Port-imgs/my-loge.png" alt="Roxy Jiang Logo" />
+            <img src="./Port-imgs/my-loge.png" alt="Roxy Jiang Logo" />
         </a>
         <div class="nav-links">
             <a href="about.html">About</a>
@@ -217,8 +248,13 @@
             <img src="./Port-imgs/avatar.png" alt="Roxy Avatar">
         </div>
         <div class="text">
-            <hb1>Hi, I’m Roxy — a creator of intuitive, visually captivating designs that turn complex challenges into
-                effortless, enjoyable experiences for users.</hb1>
+            <hb1>Hi, I’m Roxy — a creator of
+                <span class="highlight">intuitive, visually captivating</span>
+                designs that turn
+                <span class="highlight">complex challenges into effortless, enjoyable</span>
+                experiences for users.
+            </hb1>
+
         </div>
     </section>
 
@@ -276,15 +312,15 @@
                     <img src="./Card-imgs/Flower-hero.jpg" alt="Project 2 Image">
                 </div>
                 <div class="project-info">
-                    <div class="project-date">Spring 2022 • Client Project</div>
-                    <h1 class="project-title">Secret Garden</h1>
+                    <div class="project-date">Autumn 2022 • Team Project </div>
+                    <h1 class="project-title">PetHood</h1>
                     <p class="project-description">
-                        Enhancing the user's online shopping experience while reinforcing the company's brand identity.
+                        Ease the anxiety of pet owners when their beloved animals fall ill.
                     </p>
                     <div class="project-tags">
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">Website-Redesign</span>
-                        <span class="tag">Branding</span>
+                        <span class="tag">Collaboration</span>
+                        <span class="tag">UX Research</span>
+                        <span class="tag">0-1</span>
                     </div>
                     <a href="case-study2.html" class="view-more-button">View More</a>
                 </div>
@@ -295,15 +331,17 @@
     </section>
 
 
-    <!-- Footer 区域 -->
     <footer>
-        <!-- Back to Top 按钮 -->
-        <div class="back-to-top">
-            <img src="/path/to/background-image.png" alt="Background Icon" class="back-to-top-bg"> <!-- 替换为实际图片路径 -->
-            <a href="#top" class="back-to-top-btn">Back to Top</a>
+        <div class="back-to-top-container">
+            <div class="backtotop-kirby">
+                <img src="./Port-imgs/Kriby.png" alt="" aria-hidden="true" class="kirby-image">
+            </div>
+            <a href="#top" class="back-to-top">
+                <span aria-hidden="true">Top ↑</span>
+                <span class="visually-hidden">Back to top</span>
+            </a>
         </div>
-
-        <!-- "Let's Connect" 文本和分割线 -->
+        
         <div class="footer-connect">
             <p>Let’s Connect</p>
             <hr class="footer-divider">
@@ -313,26 +351,90 @@
         <div class="footer-content">
             <!-- 左边的图标和版权信息 -->
             <div class="footer-left">
-                <img src="/path/to/icon.png" alt="Footer Icon" class="footer-icon"> <!-- 替换为实际图标路径 -->
+                <img src="./Port-imgs/Switch.svg" alt="Footer Icon" class="footer-icon"> <!-- 替换为实际图标路径 -->
                 <p>&copy; 2024 Roxy Jiang</p>
             </div>
 
             <!-- 右边的按钮 -->
             <div class="footer-right">
                 <a href="/path/to/resume.pdf" class="footer-btn" target="_blank"> <!-- 替换为实际简历路径 -->
-                    <img src="/path/to/resume-icon.png" alt="Resume Icon"> <!-- 替换为实际简历图标路径 -->
+                    <img src="./Port-imgs/F-1.svg" alt="Resume Icon"> <!-- 替换为实际简历图标路径 -->
                     Resume
                 </a>
                 <a href="https://linkedin.com/in/your-linkedin" class="footer-btn" target="_blank">
                     <!-- 替换为LinkedIn实际链接 -->
-                    <img src="/path/to/linkedin-icon.png" alt="LinkedIn Icon"> <!-- 替换为LinkedIn图标路径 -->
+                    <img src="./Port-imgs/f-2.svg" alt="LinkedIn Icon"> <!-- 替换为LinkedIn图标路径 -->
                     LinkedIn
                 </a>
             </div>
         </div>
     </footer>
 
+    <script>
+        // enhanced-script.js
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.querySelector('.back-to-top');
+            const kirbyImage = document.querySelector('.kirby-image');
+            const wavePath = document.querySelector('.wave-path');
 
+            if (backToTopButton) {
+                // 添加hover效果
+                backToTopButton.addEventListener('mouseenter', function () {
+                    kirbyImage.style.transform = 'translateY(-10px)';
+                    wavePath.style.transform = 'translateY(-5px)';
+                });
+
+                backToTopButton.addEventListener('mouseleave', function () {
+                    kirbyImage.style.transform = 'translateY(0)';
+                    wavePath.style.transform = 'translateY(0)';
+                });
+
+                // 点击效果
+                backToTopButton.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // 添加动画类
+                    this.classList.add('active');
+
+                    // 播放音效（可选）
+                    const audio = new Audio('path/to/kirby-sound.mp3');
+                    audio.play();
+
+                    // 滚动到顶部
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+
+                        // 重置状态
+                        setTimeout(() => {
+                            this.classList.remove('active');
+                            kirbyImage.style.transform = '';
+                            wavePath.style.transform = '';
+                        }, 1000);
+                    }, 300);
+                });
+
+                // 滚动显示/隐藏
+                let isScrolling;
+                window.addEventListener('scroll', function () {
+                    clearTimeout(isScrolling);
+
+                    if (window.scrollY > 300) {
+                        backToTopButton.classList.add('visible');
+                    } else {
+                        backToTopButton.classList.remove('visible');
+                    }
+
+                    isScrolling = setTimeout(() => {
+                        backToTopButton.classList.remove('scrolling');
+                    }, 150);
+                });
+            }
+        });
+
+    </script>
 </body>
 
 </html>
