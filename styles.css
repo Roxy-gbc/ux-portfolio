@@ -209,14 +209,19 @@ p {
 }
 
 nav {
+    background-color: var(--color-background-light);
+    z-index: 1000;
+}
+
+.nav-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
-    padding: 0 80px;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2vw;
     box-sizing: border-box;
-    background-color: var(--color-background-light);
-    z-index: 1000;
 }
 
 @keyframes scaleAndShake {
@@ -379,106 +384,132 @@ nav .logo:hover img {
     transition: transform 0.8s ease;
 }
 
-/* 容器样式 */
-.back-to-top-container {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 1000;
+
+
+footer {
+    background-color: var(--color-background-gray-light);
 }
 
-/* Kirby容器样式 */
-.backtotop-kirby {
-    position: absolute;
-    right: -5px;
-    top: -20px;
-    z-index: 1;
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.intro {
+    margin-bottom: 60px;
+}
+
+.first-line,
+.second-line {
+    color: var(--color-text-gray-dark);
+    font-size: var(--font-size-h3);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: "Sf Pro Rounded", sans-serif;
+}
+
+.bold-text {
+    color: #000;
+    font-weight: 500;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-text-gray-dark);
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-left img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-left span {
+    font-size: var(--font-size-subhead);
+    font-style: italic;
+    font-family: "Balsamiq Sans Re", sans-serif;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+    font-size: var(--font-size-subhead);
+    font-family: "Balsamiq Sans Re", sans-serif;
+}
+
+.footer-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+}
+
+.footer-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+/* back to top button */
+.one-love-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2;
+    background: white;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.backtotop-shyguy {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 8em;
+    height: 150%;
     pointer-events: none;
 }
 
-/* Kirby图片样式 */
-.kirby-image {
-    width: 45px;
-    height: auto;
+.backtotop-shyguy img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     transition: transform 0.3s ease;
 }
 
-/* 按钮样式 */
-.back-to-top {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 24px;
-    background: #fff;
-    border-radius: 30px;
-    text-decoration: none;
-    color: #000;
-    font-family: "Balsamiq Sans", sans-serif;
-    font-size: 16px;
-    position: relative;
-    z-index: 2;
-    /* 双层边框效果 */
-    box-shadow: 
-        0 0 0 2px #000,    /* 外层黑边 */
-        0 0 0 4px #FED403; /* 内层黄边 */
-    transition: transform 0.2s ease;
-}
-
-/* 隐藏的无障碍文本 */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* Hover效果 */
-.back-to-top:hover {
-    transform: translateY(-2px);
-}
-
-.back-to-top:hover + .backtotop-kirby .kirby-image {
-    transform: translateY(-3px);
-}
-
-/* 点击效果 */
-.back-to-top:active {
-    transform: translateY(1px);
-}
-
-/* 显示/隐藏动画 */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+@keyframes flyUp {
+    0% {
+        transform: translate(-50%, 0);
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    100% {
+        transform: translate(-50%, -100vh);
     }
 }
 
-.back-to-top-container {
-    animation: fadeIn 0.3s ease;
+.one-love-button:hover~.backtotop-shyguy img {
+    transform: translate(-50%, -25px);
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .back-to-top-container {
-        right: 15px;
-        bottom: 15px;
-    }
-    
-    .back-to-top {
-        padding: 6px 20px;
-        font-size: 14px;
-    }
-    
-    .kirby-image {
-        width: 35px;
-    }
+.flying {
+    animation: flyUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }

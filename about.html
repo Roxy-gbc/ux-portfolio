@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roxy_Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .hero-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 3rem 2rem;
+            background-color: #FDF6F3;
+            border: 2px solid #C69C7B;
+            border-radius: 8px;
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-image {
+            flex: 0 0 45%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: #C69C7B;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #B38969;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                flex-direction: column;
+                padding: 2rem 1rem;
+            }
+
+            .hero-image {
+                flex: 0 0 100%;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+
+        .skills-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .skills-title {
+            color: #CCCCCC;
+            font-size: 8rem;
+            font-weight: bold;
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .skill-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Individual card positioning and styling */
+        .research-card {
+            grid-column: 2 / span 4;
+            border: 2px solid #FF6B6B;
+        }
+
+        .design-card {
+            grid-column: 6 / span 4;
+            border: 2px solid #845EF7;
+        }
+
+        .other-skills-card {
+            grid-column: 8 / span 4;
+            border: 2px solid #FAB005;
+        }
+
+        .software-card {
+            grid-column: 3 / span 5;
+            border: 2px solid #15AABF;
+        }
+
+        .generative-ai-card {
+            grid-column: 9 / span 3;
+            border: 2px solid #40C057;
+        }
+
+        @media (max-width: 768px) {
+            .skills-title {
+                font-size: 4rem;
+                top: -1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-card {
+                grid-column: 1 / -1 !important;
+            }
+        }
+
+
+        .quote-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 4rem 2rem;
+            position: relative;
+            background: #E8F5E9;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .background-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            font-size: 4rem;
+            font-weight: bold;
+            color: rgba(76, 175, 80, 0.1);
+            white-space: nowrap;
+            line-height: 1.2;
+            transform: translateY(-10%);
+        }
+
+        .quote-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .main-statement {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .quote-author {
+            font-size: 1.25rem;
+            color: #888;
+            text-align: right;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .quote-section {
+                padding: 2rem 1rem;
+            }
+
+            .background-text {
+                font-size: 2rem;
+            }
+
+            .main-statement {
+                font-size: 1.8rem;
+            }
+
+            .quote-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="background">
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="./Port-imgs/my-loge.png" alt="Roxy Jiang Logo" />
+            </a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-container">
+        <div class="hero-image">
+            <img src="./Port-imgs/My-pic.JPG" alt="Rongxue Jiang">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Rongxue Jiang (Roxy)</h1>
+            <p class="hero-description">A passionate designer and front-end developer with 3+ years of experience, based
+                in Toronto.</p>
+            <p class="hero-description">I'm dedicated to creating intuitive, engaging digital experiences that make an
+                impact.</p>
+            <a href="#" class="download-button">Download Resume</a>
+        </div>
+    </div>
+
+    <section class="skills-section">
+        <h2 class="skills-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card research-card">
+                <h3>Research</h3>
+                <p>User Interviews, User Testing, Information Architecture, Journey Mapping, User Personas, Quantitative
+                    Analysis, Affinity Mapping, A/B Testing, Design Strategy</p>
+            </div>
+
+            <div class="skill-card design-card">
+                <h3>Design</h3>
+                <p>User Experience, Interaction Design, User Interface, Physical and Digital Prototyping, Design
+                    Systems, Wireframing, Low-High Fidelity Mockups, Responsive web design</p>
+            </div>
+
+            <div class="skill-card other-skills-card">
+                <h3>Other Skills</h3>
+                <p>Rapid Iteration, Cross-functional collaboration and communication, Agile workflow, Stakeholder
+                    presentations, Human-centric approach, Web Accessibility, WCAG accessibility criteria, Korean
+                    fluency</p>
+            </div>
+
+            <div class="skill-card software-card">
+                <h3>Software</h3>
+                <p>Figma, Sketch, Adobe XD, Tripo 3D, Meshy, Generative AI, Photoshop, InDesign, AfterEffects,
+                    Illustrator, InVision, Miro, Blender, Programming (HTML/CSS, Python, JavaScript, Arduino)</p>
+            </div>
+
+            <div class="skill-card generative-ai-card">
+                <h3>Generative AI</h3>
+                <p>Midjourney, Chat GPT, Tripo 3D, Meshy</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="background-text">
+            EASY TO USE EASY TO USE EASY TO USE EASY TO USE
+            EASY TO USE EASY TO USE EASY TO USE EASY TO USE
+            EASY TO USE EASY TO USE EASY TO USE EASY TO USE
+        </div>
+        <div class="quote-content">
+            <h2 class="main-statement">I design simple experience</h2>
+            <div class="quote-text">
+                "If something requires a large investment of time—or looks like it will—it's less likely to be used."
+            </div>
+            <div class="quote-author">Steve Krug</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="intro">
+                <p class="first-line">I'm a passionate creative eager to explore internships, contract roles,
+                    freelance
+                    projects, or any exciting opportunities.</p>
+                <p class="second-line">With a keen eye for detail and a drive to craft impactful experiences, I'm
+                    ready
+                    to bring fresh ideas and energy to your team. <span class="bold-text">Let's connect and make
+                        something extraordinary happen!</span></p>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="./Port-imgs/Switch.svg" alt="Game console icon">
+                    <span>Copyright © 2024 Rongxue Jiang</span>
+                </div>
+
+                <div class="footer-right">
+                    <a href="/path/to/resume.pdf" class="footer-btn" target="_blank">
+                        <img src="./Port-imgs/F01.png" alt="">
+                        Resume
+                    </a>
+                    <a href="https://linkedin.com/in/your-linkedin" class="footer-btn" target="_blank">
+                        <img src="./Port-imgs/F02.png" alt="">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>

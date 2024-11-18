@@ -226,19 +226,19 @@
             z-index: 1000;
             padding: 20px;
         }
-
-        
     </style>
 </head>
 
-<body class="background">
+<body class="background play-scroll-initial">
     <!-- nav -->
     <nav>
-        <a href="index.html" class="logo">
-            <img src="./Port-imgs/my-loge.png" alt="Roxy Jiang Logo" />
-        </a>
-        <div class="nav-links">
-            <a href="about.html">About</a>
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="./Port-imgs/my-loge.png" alt="Roxy Jiang Logo" />
+            </a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+            </div>
         </div>
     </nav>
 
@@ -332,109 +332,65 @@
 
 
     <footer>
-        <div class="back-to-top-container">
-            <div class="backtotop-kirby">
-                <img src="./Port-imgs/Kriby.png" alt="" aria-hidden="true" class="kirby-image">
-            </div>
-            <a href="#top" class="back-to-top">
-                <span aria-hidden="true">Top ↑</span>
-                <span class="visually-hidden">Back to top</span>
-            </a>
-        </div>
-        
-        <div class="footer-connect">
-            <p>Let’s Connect</p>
-            <hr class="footer-divider">
+
+        <a class="one-love-button one-love-button--small" id="backtotop" href="#top">
+            <span aria-hidden="true">
+                Top
+                <div class="icon-arrow-top"></div>
+            </span>
+            <span class="visually-hidden">Back to top</span>
+        </a>
+        <div id="backtotop_interaction" class="backtotop-shyguy">
+            <img aria-hidden="true" src="/path-to-your-image.png">
         </div>
 
-        <!-- Footer 内容 -->
-        <div class="footer-content">
-            <!-- 左边的图标和版权信息 -->
-            <div class="footer-left">
-                <img src="./Port-imgs/Switch.svg" alt="Footer Icon" class="footer-icon"> <!-- 替换为实际图标路径 -->
-                <p>&copy; 2024 Roxy Jiang</p>
+
+        <div class="footer-container">
+            <div class="intro">
+                <p class="first-line">I'm a passionate creative eager to explore internships, contract roles,
+                    freelance
+                    projects, or any exciting opportunities.</p>
+                <p class="second-line">With a keen eye for detail and a drive to craft impactful experiences, I'm
+                    ready
+                    to bring fresh ideas and energy to your team. <span class="bold-text">Let's connect and make
+                        something extraordinary happen!</span></p>
             </div>
 
-            <!-- 右边的按钮 -->
-            <div class="footer-right">
-                <a href="/path/to/resume.pdf" class="footer-btn" target="_blank"> <!-- 替换为实际简历路径 -->
-                    <img src="./Port-imgs/F-1.svg" alt="Resume Icon"> <!-- 替换为实际简历图标路径 -->
-                    Resume
-                </a>
-                <a href="https://linkedin.com/in/your-linkedin" class="footer-btn" target="_blank">
-                    <!-- 替换为LinkedIn实际链接 -->
-                    <img src="./Port-imgs/f-2.svg" alt="LinkedIn Icon"> <!-- 替换为LinkedIn图标路径 -->
-                    LinkedIn
-                </a>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="./Port-imgs/Switch.svg" alt="Game console icon">
+                    <span>Copyright © 2024 Rongxue Jiang</span>
+                </div>
+
+                <div class="footer-right">
+                    <a href="/path/to/resume.pdf" class="footer-btn" target="_blank">
+                        <img src="./Port-imgs/F01.png" alt="">
+                        Resume
+                    </a>
+                    <a href="https://linkedin.com/in/your-linkedin" class="footer-btn" target="_blank">
+                        <img src="./Port-imgs/F02.png" alt="">
+                        LinkedIn
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
+
     <script>
-        // enhanced-script.js
-        document.addEventListener('DOMContentLoaded', function () {
-            const backToTopButton = document.querySelector('.back-to-top');
-            const kirbyImage = document.querySelector('.kirby-image');
-            const wavePath = document.querySelector('.wave-path');
+        document.getElementById('backtotop').addEventListener('click', (e) => {
+            e.preventDefault();
+            const img = document.querySelector('.backtotop-shyguy img');
+            img.classList.add('flying');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            if (backToTopButton) {
-                // 添加hover效果
-                backToTopButton.addEventListener('mouseenter', function () {
-                    kirbyImage.style.transform = 'translateY(-10px)';
-                    wavePath.style.transform = 'translateY(-5px)';
-                });
-
-                backToTopButton.addEventListener('mouseleave', function () {
-                    kirbyImage.style.transform = 'translateY(0)';
-                    wavePath.style.transform = 'translateY(0)';
-                });
-
-                // 点击效果
-                backToTopButton.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    // 添加动画类
-                    this.classList.add('active');
-
-                    // 播放音效（可选）
-                    const audio = new Audio('path/to/kirby-sound.mp3');
-                    audio.play();
-
-                    // 滚动到顶部
-                    setTimeout(() => {
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-
-                        // 重置状态
-                        setTimeout(() => {
-                            this.classList.remove('active');
-                            kirbyImage.style.transform = '';
-                            wavePath.style.transform = '';
-                        }, 1000);
-                    }, 300);
-                });
-
-                // 滚动显示/隐藏
-                let isScrolling;
-                window.addEventListener('scroll', function () {
-                    clearTimeout(isScrolling);
-
-                    if (window.scrollY > 300) {
-                        backToTopButton.classList.add('visible');
-                    } else {
-                        backToTopButton.classList.remove('visible');
-                    }
-
-                    isScrolling = setTimeout(() => {
-                        backToTopButton.classList.remove('scrolling');
-                    }, 150);
-                });
-            }
+            setTimeout(() => {
+                img.classList.remove('flying');
+            }, 1000);
         });
-
     </script>
+
+
 </body>
 
 </html>
