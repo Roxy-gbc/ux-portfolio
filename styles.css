@@ -384,10 +384,10 @@ nav .logo:hover img {
     transition: transform 0.8s ease;
 }
 
-
-
 .footer {
     background-color: var(--color-background-gray-light);
+    position: relative;
+    padding-bottom: 1vw;
 }
 
 .footer-container {
@@ -431,8 +431,8 @@ nav .logo:hover img {
 }
 
 .footer-left img {
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
 }
 
 .footer-left span {
@@ -458,58 +458,67 @@ nav .logo:hover img {
 }
 
 .footer-btn img {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
 }
 
 /* back to top button */
-.one-love-button {
-    position: fixed;
-    bottom: 2rem;
+
+.back-to-top {
+    position: absolute;
+    top: -1.5rem;
     right: 2rem;
     z-index: 2;
+}
+
+.one-love-button {
+    position: relative;
     background: white;
     border-radius: 9999px;
     padding: 0.5rem 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: black;
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    z-index: 2;
 }
 
 .backtotop-shyguy {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 8em;
-    height: 150%;
-    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4em;
+    z-index: 1;
+    margin-top: -1rem;
 }
 
 .backtotop-shyguy img {
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
+    transform: translateY(0);
 }
 
 @keyframes flyUp {
     0% {
-        transform: translate(-50%, 0);
+        transform: translateY(0);
     }
 
     100% {
-        transform: translate(-50%, -100vh);
+        transform: translateY(-250vh);
     }
 }
 
 .one-love-button:hover~.backtotop-shyguy img {
-    transform: translate(-50%, -25px);
+    transform: translateY(-25px);
 }
 
 .flying {
     animation: flyUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* 添加点击效果 */
+.one-love-button:active~.backtotop-shyguy img {
+    transform: translateY(-100vh);
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }

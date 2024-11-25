@@ -217,7 +217,6 @@
                 padding-right: 0;
             }
         }
-
     </style>
 </head>
 
@@ -281,7 +280,7 @@
             <!-- work 1 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="./Card-imgs/PetHood-hero.png" alt="Project 1 Image">
+                    <img src="./Card-imgs/Flower-hero.jpg" alt="Project 1 Image">
                 </div>
                 <div class="project-info">
                     <div class="project-date">Spring 2022 • Client Project</div>
@@ -301,7 +300,7 @@
             <!-- work 2 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="./Card-imgs/Flower-hero.jpg" alt="Project 2 Image">
+                    <img src="./Card-imgs/PetHood-hero.png" alt="Project 2 Image">
                 </div>
                 <div class="project-info">
                     <div class="project-date">Autumn 2022 • Team Project </div>
@@ -323,19 +322,7 @@
     </section>
 
 
-    <footer>
-
-        <a class="one-love-button one-love-button--small" id="backtotop" href="#top">
-            <span aria-hidden="true">
-                Top
-                <div class="icon-arrow-top"></div>
-            </span>
-            <span class="visually-hidden">Back to top</span>
-        </a>
-        <div id="backtotop_interaction" class="backtotop-shyguy">
-            <img aria-hidden="true" src="./Port-imgs/Kriby.png">
-        </div>
-
+    <footer class="footer">
 
         <div class="footer-container">
             <div class="intro">
@@ -366,6 +353,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="back-to-top">
+            <a class="one-love-button" id="backtotop" href="#top">
+                <span>Top ↑</span>
+            </a>
+            <div class="backtotop-shyguy">
+                <img src="./Port-imgs/Kriby.png" alt="">
+            </div>
+        </div>
+
     </footer>
 
 
@@ -379,6 +376,10 @@
             setTimeout(() => {
                 img.classList.remove('flying');
             }, 1000);
+
+    //         document.querySelector(link.getAttribute("href")).scrollIntoView({
+    //   behavior: "smooth",
+    // });
         });
     </script>
 
