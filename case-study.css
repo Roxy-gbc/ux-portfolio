@@ -388,6 +388,7 @@ nav .logo:hover img {
     background-color: var(--color-background-gray-light);
     position: relative;
     padding-bottom: 1vw;
+    margin-top: 7rem;
 }
 
 .footer-container {
@@ -462,63 +463,181 @@ nav .logo:hover img {
     height: 24px;
 }
 
-/* back to top button */
+/* Case Study */
 
-.back-to-top {
-    position: absolute;
-    top: -1.5rem;
-    right: 2rem;
-    z-index: 2;
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw 10vw;
+    background: var(--color-background-light);
+    min-height: 90vh;
 }
 
-.one-love-button {
-    position: relative;
-    background: white;
-    border-radius: 9999px;
-    padding: 0.5rem 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.content-left {
+    flex: 1;
+    padding-right: 5vw;
+}
+
+.company-name {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-family: "Balsamiq Sans Re", sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    margin-bottom: 4rem;
+    max-width: 600px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.info-label {
+    font-family: "SF Pro Rounded Medium", sans-serif;
+    color: var(--color-text-gray-dark);
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-body);
+    letter-spacing: 0.05em;
+}
+
+.info-content {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+}
+
+.image-right {
+    flex: 1;
+    background: var(--color-accent-purple-light);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .content-left {
+        padding-right: 0;
+    }
+
+    .hero-title {
+        font-size: calc(var(--font-size-h1) * 0.8);
+    }
+}
+
+.case-study-container {
+    display: flex;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2vw;
+}
+
+.content-section {
+    flex: 1;
+}
+
+.content-card {
+    background: var(--color-background-light);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar {
+    width: 240px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    padding: 1rem;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--color-text-gray-dark);
     text-decoration: none;
-    color: black;
-    display: inline-block;
-    z-index: 2;
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    font-size: var(--font-size-body);
+    transition: color 0.3s;
 }
 
-.backtotop-shyguy {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4em;
-    z-index: 1;
-    margin-top: -1rem;
+.sidebar-link.active {
+    color: var(--color-text-primary);
 }
 
-.backtotop-shyguy img {
-    width: 100%;
-    transition: transform 0.3s;
-    transform: translateY(0);
+.section-title {
+    font-family: "SF Pro Rounded Medium", sans-serif;
+    color: var(--color-text-gray-dark);
+    font-size: var(--font-size-body);
+    margin-bottom: 1rem;
 }
 
-@keyframes flyUp {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-250vh);
-    }
+.section-heading {
+    font-family: "SF Pro Rounded Medium", sans-serif;
+    font-size: var(--font-size-h2);
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
 }
 
-.one-love-button:hover~.backtotop-shyguy img {
-    transform: translateY(-25px);
+.section-content {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    font-size: var(--font-size-body);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
 }
 
-.flying {
-    animation: flyUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.sidebar {
+    width: 240px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
 }
 
-/* 添加点击效果 */
-.one-love-button:active~.backtotop-shyguy img {
-    transform: translateY(-100vh);
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+.sidebar-title {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    font-size: var(--font-size-subhead);
+    color: var(--color-text-gray-dark);
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar-link {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    font-size: var(--font-size-body);
+    color: var(--color-text-gray-dark);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    color: var(--color-text-primary);
 }

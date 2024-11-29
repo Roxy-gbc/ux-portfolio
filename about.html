@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roxy_Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="icon" type="image/png" href="./Port-imgs/S-logo.png">
+    <!-- 也可以添加多种尺寸 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./Port-imgs/S-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Port-imgs/S-logo.png">
 
     <style>
         .hero-container {
-            margin: 2rem 8rem;
+            margin: 3rem 8rem;
             padding: 2rem 5rem;
             background-color: #FDF6F3;
             border: 3px solid #C67241;
             display: flex;
             gap: 1.5rem;
             align-items: center;
+            max-width: 1200px;
         }
 
         .hero-image {
@@ -41,6 +46,7 @@
             padding-bottom: 1.5rem;
             padding-top: 1.5rem;
             border-top: 1px solid #ccc;
+            font-family: "Balsamiq Sans", sans-serif;
 
         }
 
@@ -49,6 +55,7 @@
             color: #555;
             line-height: 1.6;
             margin-bottom: 1rem;
+            font-family: "sf pro rounded", sans-serif;
         }
 
         .download-button {
@@ -59,6 +66,7 @@
             border-radius: 25px;
             text-decoration: none;
             font-size: 1.1rem;
+            font-family: "sf pro rounded", sans-serif;
             margin-top: 1.5rem;
             transition: background-color 0.3s ease;
         }
@@ -84,7 +92,7 @@
 
         .skills-section {
             max-width: 1200px;
-            margin: 8rem auto;
+            margin: 10rem auto; /* 10rem top and bottom, auto left and right */
             padding: 2rem;
             position: relative;
             height: 600px;
@@ -94,8 +102,9 @@
             color: #CCCCCC;
             font-size: 14rem;
             font-weight: bold;
+            font-family: "Balsamiq Sans", sans-serif;
             position: absolute;
-            top: -2rem;
+            top: -5rem;
             left: 50%;
             transform: translateX(-50%);
             z-index: -1;
@@ -110,11 +119,16 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .skill-card:hover {
-            transform: rotate(0deg) translateY(-10px);
-            z-index: 5;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            pointer-events: none;
         }
+
 
         .skill-card h3 {
             font-size: 1.5rem;
@@ -130,39 +144,93 @@
 
         /* Individual card positioning and styling */
         .research-card {
-            border: 1px solid #FF6B6B;
+            border: 5px solid #FA5757;
+            border-bottom: 15px solid #FA5757;
             top: 10%;
-            left: 15%;
-            border: 2px solid #FF6B6B;
+            left: 10%;
             transform: rotate(-8deg);
         }
 
+        .research-card::before {
+            border: 3px solid #FC736D;
+        }
+
+        .research-card:hover {
+            transform: rotate(0deg) translateY(-10px);
+            z-index: 5;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
         .design-card {
-            top: 25%;
+            top: 20%;
             left: 35%;
-            border: 2px solid #845EF7;
+            border: 5px solid #AD28EE;
+            border-bottom: 15px solid #AD28EE;
             transform: rotate(5deg);
+        }
+
+        .design-card::before {
+            border: 3px solid #AD28EE;
+        }
+
+        .design-card:hover {
+            transform: rotate(0deg) translateY(-10px);
+            z-index: 5;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .other-skills-card {
             top: 5%;
             right: 15%;
-            border: 2px solid #FAB005;
+            border: 5px solid #FAB005;
+            border-bottom: 15px solid #FAB005;
             transform: rotate(8deg);
         }
 
+        .other-skills-card::before {
+            border: 3px solid #FAB005;
+        }
+
+        .other-skills-card:hover {
+            transform: rotate(0deg) translateY(-10px);
+            z-index: 5;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
         .software-card {
-            bottom: 20%;
+            bottom: 1%;
             left: 25%;
-            border: 2px solid #15AABF;
+            border: 5px solid #05D3F7;
+            border-bottom: 15px solid #05D3F7;
             transform: rotate(-3deg);
         }
 
+        .software-card::before {
+            border: 3px solid #05D3F7;
+        }
+
+        .software-card:hover {
+            transform: rotate(0deg) translateY(-10px);
+            z-index: 5;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
         .generative-ai-card {
-            bottom: 30%;
+            bottom: 12%;
             right: 20%;
-            border: 2px solid #40C057;
+            border: 5px solid #40C057;
+            border-bottom: 15px solid #40C057;
             transform: rotate(6deg);
+        }
+
+        .generative-ai-card::before {
+            border: 3px solid #40C057;
+        }
+
+        .generative-ai-card:hover {
+            transform: rotate(0deg) translateY(-10px);
+            z-index: 5;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -180,76 +248,97 @@
             }
         }
 
+        .quote-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: -4rem;
+        }
+
 
         .quote-section {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 4rem 2rem;
             position: relative;
-            background: #E8F5E9;
-            border: 2px solid #4CAF50;
-            border-radius: 8px;
+            width: 100%;
+            max-width: 1200px;
+            background: #e8f5e9;
+            border: 4px solid #01A03C;
             overflow: hidden;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
         }
 
         .background-text {
             position: absolute;
+            padding-top: 1.5rem;
             top: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            font-size: 4rem;
-            font-weight: bold;
+            left: 10px;
+            right: 30px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
             color: rgba(76, 175, 80, 0.1);
+            font-size: 2rem;
+            font-weight: bold;
             white-space: nowrap;
-            line-height: 1.2;
-            transform: translateY(-10%);
+            z-index: 1;
+        }
+
+        .scroll-line {
+            animation: scroll 20s linear infinite;
+        }
+
+        .scroll-line:nth-child(2) {
+            animation-delay: -6.66s;
+        }
+
+        .scroll-line:nth-child(3) {
+            animation-delay: -13.33s;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         .quote-content {
             position: relative;
-            z-index: 1;
-            max-width: 900px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 800px;
             margin: 0 auto;
+            padding-top: 2rem;
         }
 
         .main-statement {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 2rem;
+            font-size: 4rem;
+            margin: 2rem auto;
+            color: #2e7d32;
+            font-family: "Balsamiq Sans", sans-serif;
         }
 
         .quote-text {
             font-size: 1.5rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            color: #1b5e20;
+            font-family: "Balsamiq Sans Italic", sans-serif;
         }
 
         .quote-author {
-            font-size: 1.25rem;
-            color: #888;
+            color: #2e7d32;
+            font-weight: bold;
+            padding-top: 2rem;
+            font-size: 1.5rem;
             text-align: right;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .quote-section {
-                padding: 2rem 1rem;
-            }
-
-            .background-text {
-                font-size: 2rem;
-            }
-
-            .main-statement {
-                font-size: 1.8rem;
-            }
-
-            .quote-text {
-                font-size: 1.2rem;
-            }
+            font-family: "Balsamiq Sans", sans-serif;
         }
     </style>
 
@@ -258,7 +347,7 @@
 <body class="background">
     <nav>
         <div class="nav-content">
-            <a href="index.html" class="logo">
+            <a href="Home.html" class="logo">
                 <img src="./Port-imgs/my-loge.png" alt="Roxy Jiang Logo" />
             </a>
             <div class="nav-links">
@@ -316,22 +405,31 @@
         </div>
     </section>
 
-    <section class="quote-section">
-        <div class="background-text">
-            EASY TO USE EASY TO USE EASY TO USE EASY TO USE
-            EASY TO USE EASY TO USE EASY TO USE EASY TO USE
-            EASY TO USE EASY TO USE EASY TO USE EASY TO USE
-        </div>
-        <div class="quote-content">
-            <h2 class="main-statement">I design simple experience</h2>
-            <div class="quote-text">
-                "If something requires a large investment of time—or looks like it will—it's less likely to be used."
+    <div class="quote-container">
+        <section class="quote-section">
+            <div class="background-text">
+                <div class="scroll-line">EASY TO USE EASY TO USE EASY TO USE EASY TO USE EASY TO USE EASY TO USE EASY TO
+                    USE
+                    EASY TO USE </div>
+                <div class="scroll-line">EASY TO USE EASY TO USE EASY TO USE EASY TO USE EASY TO USE EASY TO USE EASY TO
+                    USE
+                    EASY TO USE </div>
+                <div class="scroll-line">EASY TO USE EASY TO USE EASY TO USE EASY TO USE EASY TO USE EASY TO USE EASY TO
+                    USE
+                    EASY TO USE </div>
             </div>
-            <div class="quote-author">Steve Krug</div>
-        </div>
-    </section>
+            <div class="quote-content">
+                <h2 class="main-statement">I design simple experience</h2>
+                <div class="quote-text">
+                    "If something requires a large investment of time—or looks like it will—it's less likely to be
+                    used."
+                </div>
+                <div class="quote-author"> - Steve Krug</div>
+            </div>
+        </section>
+    </div>
 
-    <footer>
+    <footer class="footer">
         <div class="footer-container">
             <div class="intro">
                 <p class="first-line">I'm a passionate creative eager to explore internships, contract roles,
