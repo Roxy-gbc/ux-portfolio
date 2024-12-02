@@ -284,6 +284,28 @@
             <!-- work 1 -->
             <div class="project-card">
                 <div class="project-image">
+                    <img src="./Card-imgs/PetHood-hero.png" alt="Project 2 Image">
+                </div>
+                <div class="project-info">
+                    <div class="project-date">Autumn 2022 • Team Project </div>
+                    <h1 class="project-title">PetHood</h1>
+                    <p class="project-description">
+                        Ease the anxiety of pet owners when their beloved animals fall ill.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Collaboration</span>
+                        <span class="tag">UX Research</span>
+                        <span class="tag">0-1</span>
+                    </div>
+                    <a href="Pethood.html" class="view-more-button">View More</a>
+                </div>
+            </div>
+
+            <!-- work 2 -->
+
+
+            <div class="project-card">
+                <div class="project-image">
                     <img src="./Card-imgs/Flower-hero.jpg" alt="Project 1 Image">
                 </div>
                 <div class="project-info">
@@ -301,25 +323,6 @@
                 </div>
             </div>
 
-            <!-- work 2 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="./Card-imgs/PetHood-hero.png" alt="Project 2 Image">
-                </div>
-                <div class="project-info">
-                    <div class="project-date">Autumn 2022 • Team Project </div>
-                    <h1 class="project-title">PetHood</h1>
-                    <p class="project-description">
-                        Ease the anxiety of pet owners when their beloved animals fall ill.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Collaboration</span>
-                        <span class="tag">UX Research</span>
-                        <span class="tag">0-1</span>
-                    </div>
-                    <a href="case-study2.html" class="view-more-button">View More</a>
-                </div>
-            </div>
 
             <!-- more work -->
         </div>
@@ -378,12 +381,17 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
             setTimeout(() => {
-                img.classList.remove('flying');
+                img.classList.add('flyingSide');
             }, 1000);
 
-    //         document.querySelector(link.getAttribute("href")).scrollIntoView({
-    //   behavior: "smooth",
-    // });
+            setTimeout(() => {
+                img.classList.remove('flying'); 
+                img.classList.remove('flyingSide');
+            }, 5000);
+
+            //         document.querySelector(link.getAttribute("href")).scrollIntoView({
+            //   behavior: "smooth",
+            // });
         });
     </script>
 

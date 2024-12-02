@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="case-study.css">
+    <link rel="icon" type="image/png" href="./Port-imgs/S-logo.png">
+    <!-- 也可以添加多种尺寸 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./Port-imgs/S-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Port-imgs/S-logo.png">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="./Port-imgs/my-loge.png" alt="Roxy Jiang Logo" />
+            </a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="case-introPart">
+
+        <!-- 顶部可滚动内容 -->
+        <div class="case-intro-wrap">
+            <a href="#" class="go-back">← Go Back</a>
+            <h2>iOS App Design | Team Project</h2>
+            <h1>PetHood offers expert guidance and support to pet owners who are concerned about the health of their furry friends.</h1>
+        </div>
+
+        <!-- 底层固定图片 -->
+        <div class="case-image-wrap">
+            <div class="Fixed-image">
+                <img src="./PetHood-imgs/hero.jpg" alt="Project preview">
+            </div>
+        </div>
+
+        <div class="empty-area"></div>
+        <!-- info-grid -->
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">ROLE</div>
+                <div class="info-content">Project Initiator</div>
+                <div class="info-content">Team Leader</div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-label">DURATION</div>
+                <div class="info-content">2 Month</div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-label">DELIVERY</div>
+                <div class="info-content">
+                    UX Research<br>
+                    Ideation<br>
+                    Iteration<br>
+                    Team Management<br>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-label">MY IMPACTS</div>
+                <div class="info-content">
+                    Meeting organization<br>
+                    Progress planning<br>
+                    User research<br>
+                    Competitive analysis<br>
+                    User testing<br>
+                    Feature design
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <div class="case-study-container">
+
+        <div class="content-section">
+            <!-- Overview -->
+            <section id="overview" class="content-card overview-section">
+                <div class="section-label">OVERVIEW</div>
+                <div class="section-text">
+                    PetHood - A One-Stop Solution for Your Pet's Health. Connect with authorized veterinarians and get
+                    professional advice, information, and expert explanations on various pet diseases.
+                </div>
+
+            </section>
+
+            <!-- Problem -->
+            <section id="problem-solution" class="content-card">
+                <div class="card-split">
+                    <div class="card-content">
+                        <div class="section-label">PROBLEM</div>
+                        <h2 class="section-title">Restrictive policy leading to credit card rejections</h2>
+                        <div class="section-text">
+                            Over 37,000 credit card rejections were reported by Navan users—business travelers who found
+                            their Navan business credit cards unusable due to company policies that only activate travel
+                            cards for trips involving flights or hotel bookings.
+                        </div>
+                        <div class="subsection-title">WHY IS THIS IMPORTANT?</div>
+                        <div class="section-text">
+                            This restriction was particularly problematic for travelers on short trips without such
+                            bookings, often leading to embarrassing card declines and subsequent reimbursement hassles.
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img src="path-to-card-image.png" alt="Navan Card Decline Interface">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional sections follow the same pattern -->
+            <section id="user-challenge" class="content-card">
+                <div class="section-label">USER CHALLENGE</div>
+                <!-- Add content -->
+            </section>
+
+            <section id="technical-challenge" class="content-card">
+                <div class="section-label">TECHNICAL CHALLENGE</div>
+                <!-- Add content -->
+            </section>
+
+            <section id="business-challenge" class="content-card">
+                <div class="section-label">BUSINESS CHALLENGE</div>
+                <!-- Add content -->
+            </section>
+
+            <section id="result" class="content-card">
+                <div class="section-label">RESULT</div>
+                <!-- Add content -->
+            </section>
+
+            <section id="next-steps" class="content-card">
+                <div class="section-label">NEXT STEPS</div>
+                <!-- Add content -->
+            </section>
+
+            <section id="learnings" class="content-card">
+                <div class="section-label">LEARNINGS</div>
+                <!-- Add content -->
+            </section>
+
+            <section id="recommendations" class="content-card">
+                <div class="section-label">RECOMMENDATIONS</div>
+                <!-- Add content -->
+            </section>
+        </div>
+
+        <div class="sidebar">
+            <h3 class="sidebar-title">ON THIS PAGE</h3>
+            <nav class="sidebar-nav">
+                <a href="#overview" class="sidebar-link">Overview</a>
+                <a href="#problem-solution" class="sidebar-link">Problem / Solution</a>
+                <a href="#user-challenge" class="sidebar-link">User challenge</a>
+                <a href="#technical-challenge" class="sidebar-link">Technical challenge</a>
+                <a href="#business-challenge" class="sidebar-link">Business challenge</a>
+                <a href="#result" class="sidebar-link">Result</a>
+                <a href="#next-steps" class="sidebar-link">Next steps</a>
+                <a href="#learnings" class="sidebar-link">Learnings</a>
+                <a href="#recommendations" class="sidebar-link">Recommendations</a>
+            </nav>
+        </div>
+
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.sidebar-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    updateActiveLink(activeId);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        function updateActiveLink(activeId) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').substring(1);
+                if (href === activeId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Smooth scroll
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

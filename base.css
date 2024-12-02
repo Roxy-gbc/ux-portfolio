@@ -218,9 +218,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 60px;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2vw;
+    padding: 1vw 9vw;
     box-sizing: border-box;
 }
 
@@ -556,12 +555,43 @@ nav .logo:hover img {
     }
 }
 
+
+@keyframes flySide {
+    0% {
+        transform: translate(0, -230vh);
+    }
+
+    20% {
+        transform: translate(-5vw, -270vh);
+    }
+
+    40% {
+        transform: translate(-10vw, -260vh);
+    }
+
+    60% {
+        transform: translate(5vw, -236vh);
+    }
+
+    80% {
+        transform: translate(10vw, -232vh);
+    }
+
+    100% {
+        transform: translate(0vw, -240vh);
+    }
+}
+
 .one-love-button:hover~.backtotop-shyguy img {
     transform: translateY(-15px);
 }
 
 .flying {
     animation: flyUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.flyingSide {
+    animation: flySide 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 /* 添加点击效果 */

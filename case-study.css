@@ -70,6 +70,7 @@
 
 body {
     font-family: "SF Pro Rounded", sans-serif;
+    background-color: var(--color-background-light);
 }
 
 
@@ -208,121 +209,6 @@ p {
     background-color: var(--color-gray-4);
 }
 
-nav {
-    background-color: var(--color-background-light);
-    z-index: 1000;
-}
-
-.nav-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2vw;
-    box-sizing: border-box;
-}
-
-@keyframes scaleAndShake {
-    0% {
-        transform: scale(1);
-    }
-
-    20% {
-        transform: scale(0.8);
-    }
-
-    40% {
-        transform: scale(1.1);
-    }
-
-    30%,
-    50%,
-    70% {
-        transform: rotate(5deg);
-    }
-
-    40%,
-    60% {
-        transform: rotate(-5deg);
-    }
-
-    80% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: scale(1) rotate(0deg);
-    }
-
-}
-
-
-@keyframes tiltShake {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(5deg);
-    }
-
-    50% {
-        transform: rotate(-5deg);
-    }
-
-    75% {
-        transform: rotate(5deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-
-nav .logo img {
-    height: 40px;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.2s;
-}
-
-nav .logo:hover img {
-    animation: scaleAndShake 1s ease forwards;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-size: 18px;
-    color: var(--color-text-primary);
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #ff6600;
-}
-
-@media (max-width: 768px) {
-    nav {
-        padding: 0 40px;
-    }
-
-    nav .logo img {
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        padding: 0 20px;
-    }
-
-    nav .logo img {
-        height: 30px;
-    }
-}
 
 .view-more-button {
     width: 10vw;
@@ -465,71 +351,111 @@ nav .logo:hover img {
 
 /* Case Study */
 
-.hero-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 5vw 10vw;
-    background: var(--color-background-light);
-    min-height: 90vh;
+.case-introPart {
+    position: relative;
+    width: 100%;
 }
 
-.content-left {
-    flex: 1;
-    padding-right: 5vw;
+.case-intro-wrap {
+    position: relative;
+    width: 100%;
+    padding: 5vw 9vw;
+    z-index: 2;
+    background: linear-gradient(
+        180deg, 
+        var(--color-background-light) 0%,
+        var(--color-background-light) 70%,
+        rgba(250, 250, 250, 0.9) 90%,
+        rgba(250, 250, 250, 0) 100%
+    );
 }
 
-.company-name {
+.go-back {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-text-gray-dark);
     font-family: "SF Pro Rounded Regular", sans-serif;
-    color: var(--color-text-secondary);
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: var(--font-size-headline);
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
 }
 
-.hero-title {
-    font-family: "Balsamiq Sans Re", sans-serif;
-    font-size: 3.5rem;
-    line-height: 1.2;
+.go-back:hover {
     color: var(--color-text-primary);
-    margin-bottom: 4rem;
-    max-width: 600px;
+}
+
+.case-intro-wrap h2 {
+    font-family: "SF Pro Rounded Medium", sans-serif;
+    font-size: var(--font-size-h2);
+    color: var(--color-text-gray-dark);
+    margin-bottom: 3rem;
+    line-height: 1.4;
+}
+
+.case-intro-wrap h1 {
+    font-family: "balsamiq sans", sans-serif;
+    font-size: 3rem;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.case-image-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 固定高度 */
+    z-index: -1;
+}
+
+.empty-area {
+    position: relative;
+    height: 100vh; /* 与图片区域相同高度 */
+    width: 100%;
+}
+
+.Fixed-image {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.Fixed-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
 .info-grid {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    padding: 2rem;
+    background: var(--color-background-light);
 }
 
 .info-label {
     font-family: "SF Pro Rounded Medium", sans-serif;
     color: var(--color-text-gray-dark);
-    margin-bottom: 0.5rem;
     font-size: var(--font-size-body);
-    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+    border-top: 1px solid var(--color-border-gray-light);
+    padding-top: 0.5vw;
 }
 
 .info-content {
     font-family: "SF Pro Rounded Regular", sans-serif;
     color: var(--color-text-secondary);
-    font-size: var(--font-size-body);
-    line-height: 1.6;
-}
-
-.image-right {
-    flex: 1;
-    background: var(--color-accent-purple-light);
-    border-radius: 1rem;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.image-right img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-size: var(--font-size-subhead);
+    letter-spacing: 0.05rem;
+    line-height: 1.3;
 }
 
 @media (max-width: 768px) {
@@ -548,11 +474,23 @@ nav .logo:hover img {
 }
 
 .case-study-container {
+    position: relative;
+    z-index: 2;
     display: flex;
     gap: 4rem;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2vw;
+    padding: 2rem;
+    background: var(--color-background-light);
+}
+
+/* 确保内容卡片有背景色 */
+.content-card {
+    background: var(--color-background-light);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .content-section {
