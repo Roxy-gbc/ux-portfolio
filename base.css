@@ -169,6 +169,8 @@ p {
     font-family: "PolygonParty", sans-serif;
 }
 
+
+
 .subhead {
     font-size: var(--font-size-subhead);
     color: var(--color-font-1);
@@ -208,10 +210,16 @@ p {
     background-color: var(--color-gray-4);
 }
 
-nav {
-    background-color: var(--color-background-light);
+/* nav的基础样式 */
+body > nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(250, 250, 250);
+    transition: all 0.3s ease;
     z-index: 1000;
-}
+  }
 
 .nav-content {
     display: flex;
@@ -221,6 +229,22 @@ nav {
     margin: 0 auto;
     padding: 1vw 9vw;
     box-sizing: border-box;
+    z-index: 1000;
+}
+
+.hide-bg{
+position: fixed;
+width: 100%;
+height: 70vh;
+z-index: 3;
+top: 0;
+background-color: var(--color-background-light);
+}
+
+
+
+body {
+    padding-top: 60px;
 }
 
 @keyframes scaleAndShake {
@@ -387,7 +411,6 @@ nav .logo:hover img {
     background-color: var(--color-background-gray-light);
     position: relative;
     padding-bottom: 1vw;
-    margin-top: 7rem;
 }
 
 .footer-container {
@@ -481,7 +504,7 @@ nav .logo:hover img {
     font-size: 1rem;
     color: black;
     display: inline-block;
-    z-index: 2;
+    z-index: 1500;
     /* 新添加的样式 */
     border: 4px solid;  /* 实体边框 */
     box-shadow: 0 6px 0 #000;  /* 实体阴影 */
@@ -535,7 +558,7 @@ nav .logo:hover img {
     left: 50%;
     transform: translateX(-50%);
     width: 8em;
-    z-index: 1;
+    z-index: 1449;
     margin-top: -5rem;
 }
 

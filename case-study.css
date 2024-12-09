@@ -1,81 +1,6 @@
-@font-face {
-    font-family: "PipeDream";
-    src: url("./Fonts/PipeDream-1Zwg.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "PolygonParty";
-    src: url("./Fonts/PolygonParty-3KXM.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SuperMarioBros";
-    src: url("./Fonts/SuperMarioBros-ov7d.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Balsamiq Sans Re";
-    src: url("./Fonts/BalsamiqSans/BalsamiqSans-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Balsamiq Sans Bold";
-    src: url("./Fonts/BalsamiqSans/BalsamiqSans-Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Balsamiq Sans Italic";
-    src: url("./Fonts/BalsamiqSans/BalsamiqSans-Italic.ttf") format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Balsamiq Sans Bold Italic";
-    src: url("./Fonts/BalsamiqSans/BalsamiqSans-BoldItalic.ttf") format("truetype");
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "SF Pro Rounded Light";
-    src: url("./Fonts/SF-pro-Round/SF-Pro-Rounded-Light.otf") format("opentype");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Rounded Regular";
-    src: url("./Fonts/SF-pro-Round/SF-Pro-Rounded-Regular.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "SF Pro Rounded Medium";
-    src: url("./Fonts/SF-pro-Round/SF-Pro-Rounded-Medium.otf") format("opentype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-body {
-    font-family: "SF Pro Rounded", sans-serif;
-    background-color: var(--color-background-light);
-}
-
-
+/* 根变量和基础设置 */
 :root {
-    /* theme color */
+    /* 颜色变量 */
     --color-background-light: #fafafa;
     --color-accent-purple-light: #D1C4FD;
     --color-accent-purple-deep: #AD28EE;
@@ -87,14 +12,8 @@ body {
     --color-text-primary: #401201;
     --color-text-secondary: #40352B;
     --color-text-black: #000000;
-    --colour-blue: #00D2FF;
-    --colour-red: #EE0500;
-    --colour-green: #1DDB81;
-    --colour-yellow: #FFF000;
-    --colour-purple: #B42FF5;
 
-
-    /* font size */
+    /* 字体大小 */
     --font-size-h1: 28px;
     --font-size-h2: 22px;
     --font-size-h3: 20px;
@@ -102,300 +21,60 @@ body {
     --font-size-nav: 22px;
     --font-size-subhead: 15px;
     --font-size-headline: 17px;
-
-    /*--font-size-h1: 1.75rem; /* 相当于 28px */
-    /*--font-size-h2: 1.375rem; /* 相当于 22px */
-    /*--font-size-h3: 1.25rem; /* 相当于 20px */
-    /*--font-size-body: 0.8125rem; /* 相当于 13px */
-    /*--font-size-nav: 1.375rem; /* 相当于 22px */
-    /*--font-size-subhead: 0.9375rem; /* 相当于 15px */
-    /*--font-size-headline: 1.0625rem; /* 相当于 17px */
-
-    /* font */
-    --font-family-main: 'SF Pro Rounded', sans-serif;
 }
 
-/* body */
-
-.background {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./Port-imgs/main-bg.png');
-    background-repeat: repeat;
-    background-size: 300px auto;
-    z-index: -99;
-}
-
-
+/* 基础重置和通用样式 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-hb1 {
-    font-size: 34px;
-    line-height: 1.5;
-    font-weight: 450;
-    color: var(--color-text-primary);
-    font-family: "Balsamiq Sans Re", sans-serif;
-}
-
-h1 {
-    font-size: var(--font-size-h1);
-    color: var(--color-text-primary);
-    font-family: "Balsamiq Sans Re", sans-serif;
-}
-
-h2 {
-    font-size: var(--font-size-h2);
-    color: var(--color-text-primary);
-    font-family: "Balsamiq Sans Re", sans-serif;
-}
-
-h3 {
-    font-size: var(--font-size-h3);
-    color: var(--color-text-primary);
-    font-family: "Balsamiq Sans Re", sans-serif;
-}
-
-body,
-p {
-    font-size: var(--font-size-body);
+body {
+    font-family: "SF Pro Rounded", sans-serif;
+    background-color: var(--color-background-light);
     color: var(--color-text-secondary);
+    font-size: var(--font-size-body);
 }
 
-.nav-links a {
-    font-size: var(--font-size-nav);
-    color: var(--color-font-1);
-    text-decoration: none;
-    font-family: "PolygonParty", sans-serif;
+/* 文本和标题样式 */
+h1, h2, h3 {
+    font-family: "SF Pro Rounded Medium", sans-serif;
+    color: var(--color-text-primary);
 }
 
-.subhead {
-    font-size: var(--font-size-subhead);
-    color: var(--color-font-1);
+.hide-bg {
+z-index: 1;
 }
 
-.headline {
-    font-size: var(--font-size-headline);
-    color: var(--color-font-1);
-}
-
-/* bg color */
-.bg-purple {
-    background-color: var(--color-purple);
-}
-
-.bg-deep-purple {
-    background-color: var(--color-deep-purple);
-}
-
-.bg-light-purple {
-    background-color: var(--color-light-purple);
-}
-
-.bg-gray-1 {
-    background-color: var(--color-gray-1);
-}
-
-.bg-gray-2 {
-    background-color: var(--color-gray-2);
-}
-
-.bg-gray-3 {
-    background-color: var(--color-gray-3);
-}
-
-.bg-gray-4 {
-    background-color: var(--color-gray-4);
-}
-
-
-.view-more-button {
-    width: 10vw;
+/* Case Study 主要布局结构 */
+.case-study-container {
     position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 24px;
-    font-weight: 500;
-    font-size: 15px;
-    text-decoration: none;
-    color: #000;
-    background: white;
-    border: 3px solid;
-    border-radius: 50px;
-    animation: rotateBorderColors 4s linear infinite;
-}
-
-@keyframes rotateBorderColors {
-    0% {
-        border-color: #F2762E;
-    }
-
-    12.5% {
-        border-color: #D9AB73;
-    }
-
-    25% {
-        border-color: #F2CE16;
-    }
-
-    37.5% {
-        border-color: #61BF5E;
-    }
-
-    50% {
-        border-color: #3D8BF2;
-    }
-
-    62.5% {
-        border-color: #AD28EE;
-    }
-
-    75% {
-        border-color: #B77DEE;
-    }
-
-    87.5% {
-        border-color: #F22786;
-    }
-
-    100% {
-        border-color: #ff0000;
-    }
-}
-
-.view-more-button:hover {
-    transform: translateY(-2px);
-    transition: transform 0.8s ease;
-}
-
-.footer {
-    background-color: var(--color-background-gray-light);
-    position: relative;
-    padding-bottom: 1vw;
-    margin-top: 7rem;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 5vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-}
-
-.intro {
-    margin-bottom: 60px;
-}
-
-.first-line,
-.second-line {
-    color: var(--color-text-gray-dark);
-    font-size: var(--font-size-h3);
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-family: "Sf Pro Rounded", sans-serif;
-}
-
-.bold-text {
-    color: #000;
-    font-weight: 500;
-}
-
-.footer-content {
+    z-index: 2;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-top: 1px solid var(--color-text-gray-dark);
+    gap: 1rem;  
+    margin-top: 4rem auto;
+    padding: 5rem 8rem;
+    background: var(--color-background-light);
+    max-width: 1440px; 
 }
 
-.footer-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-left img {
-    width: 44px;
-    height: 44px;
-}
-
-.footer-left span {
-    font-size: var(--font-size-subhead);
-    font-style: italic;
-    font-family: "Balsamiq Sans Re", sans-serif;
-}
-
-.footer-right {
-    display: flex;
-    gap: 20px;
-    font-size: var(--font-size-subhead);
-    font-family: "Balsamiq Sans Re", sans-serif;
-}
-
-.footer-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: inherit;
-    font-size: 16px;
-}
-
-.footer-btn img {
-    width: 24px;
-    height: 24px;
-}
-
-
-
-/* Case Study */
+/* 顶部介绍部分 */
 .case-intro-wrap {
     position: relative;
     width: 100%;
-    padding: 4vw 9vw;
-    padding-bottom: 6vw;
-    z-index: 2;
+    padding: 4vw 9vw 6vw;
+    z-index: 3;
     background: var(--color-background-light);
 }
 
-.go-back {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--color-text-gray-dark);
-    margin-bottom: 1.5rem;
-    transition: color 0.3s;
-    font-size: var(--font-size-subhead); 
-}
-
-.go-back:hover {
-    color: var(--color-text-primary);
-}
-
-.go-back:hover .arrow {
-    display: inline-block;
-    animation: arrowLoop 1s ease-in-out infinite;
-}
-
-@keyframes arrowLoop {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-5px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.case-intro-wrap h2 {
-    font-family: "SF Pro Rounded Regular", sans-serif;
-    font-size: var(--font-size-h2);
-    color: var(--color-text-gray-dark);
-    margin-bottom: 3rem;
+.case-image-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
 }
 
 .case-intro-wrap h1 {
@@ -406,12 +85,18 @@ p {
     margin-bottom: 4rem;
 }
 
+.case-intro-wrap h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-text-gray-dark);
+    margin-bottom: 3rem;
+}
+
 .content-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     margin-top: 2rem;
-    align-items: end;  
+    align-items: end;
 }
 
 .context-column h3 {
@@ -427,6 +112,7 @@ p {
     line-height: 1.2;
     color: var(--color-text-secondary);
     margin-bottom: 1.5rem;
+    letter-spacing: 0.05rem;
 }
 
 .info-column {
@@ -437,7 +123,7 @@ p {
 
 .info-item {
     display: grid;
-    grid-template-columns: 100px 1fr;  
+    grid-template-columns: 100px 1fr;
     border-top: 1px solid var(--color-border-gray-light);
     padding-top: 0.5rem;
     gap: 1rem;
@@ -457,35 +143,10 @@ p {
     flex: 1;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .content-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .case-intro-wrap h1 {
-        font-size: 2.5rem;
-    }
-    
-    .info-item {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-.case-image-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* 固定高度 */
-    z-index: -1;
-}
 
 .empty-area {
     position: relative;
-    height: 100vh; /* 与图片区域相同高度 */
+    height: 100vh;
     width: 100%;
 }
 
@@ -504,102 +165,253 @@ p {
     z-index: 1;
 }
 
-.case-study-container {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    gap: 4rem;
-    margin: 0 auto;
-    padding: 2rem 8rem;
-    background: var(--color-background-light);
+/* Overview 部分 */
+.overview-label {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    color: var(--color-text-gray-dark);
+    font-size: var(--font-size-headline);
+    margin: 1rem 0;
+    letter-spacing: 0.05rem;
+    padding: 0 5rem;
 }
 
-/* 确保内容卡片有背景色 */
-.content-card {
-    background: var(--color-background-light);
-    border-radius: 1rem;
-    padding: 3rem;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 2;
+.overview-text {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    font-size: var(--font-size-subhead);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    margin-bottom: 5rem;
+    letter-spacing: 0.05rem;
+    padding: 0 5rem;
 }
+
+/* 内容部分 */
 
 .content-section {
-    flex: 1;
+    flex: 0 0 85%;
 }
 
-.sidebar {
-    width: 240px;
-    position: sticky;
-    top: 2rem;
-    height: fit-content;
-    padding: 1rem;
+/* 新增的章节容器样式 */
+.chapter-section {
+    margin-bottom: 5rem;  /* 与其他部分保持一致的间距 */
 }
 
-.sidebar-link {
-    display: block;
-    padding: 0.5rem 0;
-    color: var(--color-text-gray-dark);
-    text-decoration: none;
+/* 章节头部样式 */
+.chapter-header {
+    margin-bottom: 3rem;
+    padding: 0 5rem;  /* 与 overview 部分保持一致的内边距 */
+}
+
+.chapter-label {
     font-family: "SF Pro Rounded Regular", sans-serif;
-    font-size: var(--font-size-body);
-    transition: color 0.3s;
+    color: var(--color-text-gray-dark);
+    font-size: var(--font-size-headline);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
 }
 
-.sidebar-link.active {
+.chapter-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
     color: var(--color-text-primary);
+    max-width: 50rem;
+}
+
+/* 基础卡片样式 */
+.content-card {
+    background: rgba(189, 229, 231, 0.5);
+    border-radius: 1rem;
+    padding: 4rem;
+    margin: 2rem 0;
+    position: relative;
+    z-index: 2;
+
+    /* 硬件加速 */
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+/* 确保卡片内容清晰 */
+.content-card > * {
+    transform: translateZ(0);
+}
+
+/* 当前滚动到的卡片状态 */
+.content-card.active {
+    transform: scale(1);
+}
+
+/* Add new styles for images within content cards */
+.content-card .card-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* 左边文字区域稍大，右边图片区域稍小 */
+    gap: 3rem;
+    align-items: center;
+}
+
+.content-card .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content-card .card-image {
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.content-card .card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .content-card .card-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* 只针对带有 image-bottom 类的卡片 */
+.content-card.image-bottom .card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-card.image-bottom .text-content {
+    width: 100%;
+}
+
+.content-card.image-bottom .card-image {
+    width: 100%;
+}
+
+
+/* content card font */
+.section-label {
+    font-family: "SF Pro Rounded Medium", sans-serif;
+    color: var(--color-text-gray-dark);
+    font-size: var(--font-size-body);
+    margin-bottom:0.5rem;
 }
 
 .section-title {
-    font-family: "SF Pro Rounded Medium", sans-serif;
-    color: var(--color-text-gray-dark);
-    font-size: var(--font-size-body);
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--color-text-primary);
     margin-bottom: 1rem;
+    max-width: 38rem;
 }
 
-.section-heading {
-    font-family: "SF Pro Rounded Medium", sans-serif;
-    font-size: var(--font-size-h2);
-    color: var(--color-text-primary);
+.section-text {
+    font-size: var(--font-size-subhead);
+    line-height: 1.6;
     margin-bottom: 1.5rem;
 }
 
-.section-content {
-    font-family: "SF Pro Rounded Regular", sans-serif;
-    font-size: var(--font-size-body);
-    color: var(--color-text-secondary);
-    line-height: 1.6;
+/* 侧边栏 */
+.sidebar {
+    flex: 0 0 15%;  
+    position: sticky;
+    top: 12rem;
+    height: fit-content;
+    padding-left: 2rem;  
+    z-index: 1000; 
 }
 
-.sidebar {
-    width: 240px;
-    position: sticky;
-    top: 2rem;
-    height: fit-content;
-}
 
 .sidebar-title {
-    font-family: "SF Pro Rounded Regular", sans-serif;
-    font-size: var(--font-size-subhead);
+    font-size: var(--font-size-headline);
     color: var(--color-text-gray-dark);
     margin-bottom: 1.5rem;
+    font-family: "SF Pro Rounded Regular", sans-serif;
 }
 
 .sidebar-nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    z-index: 1001;
 }
 
 .sidebar-link {
-    font-family: "SF Pro Rounded Regular", sans-serif;
-    font-size: var(--font-size-body);
+    display: block;
+    z-index: 1002;
+    padding: 0.5rem 0;
     color: var(--color-text-gray-dark);
     text-decoration: none;
-    transition: color 0.2s ease;
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    font-size: var(--font-size-subhead);
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    z-index: 102; 
+    
 }
 
-.sidebar-link:hover,
 .sidebar-link.active {
     color: var(--color-text-primary);
+    font-size: var(--font-size-subhead);
+    opacity: 1;
+    transform: translateX(15px);
+}
+
+/* 返回按钮 */
+.go-back {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-text-gray-dark);
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+    font-size: var(--font-size-subhead);
+}
+
+.go-back:hover {
+    color: var(--color-text-primary);
+}
+
+.go-back:hover .arrow {
+    display: inline-block;
+    animation: arrowLoop 1s ease-in-out infinite;
+}
+
+@keyframes arrowLoop {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .case-study-container {
+        padding: 2rem 4rem;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study-container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    
+    .content-section,
+    .sidebar {
+        flex: 0 0 100%;
+    }
+
+    .case-intro-wrap h1 {
+        font-size: 2.5rem;
+    }
 }

@@ -8,6 +8,7 @@
     <!-- 也可以添加多种尺寸 -->
     <link rel="icon" type="image/png" sizes="32x32" href="./Port-imgs/S-logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./Port-imgs/S-logo.png">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             </div>
         </div>
     </nav>
-
+    <div class="hide-bg" id="hide-bg"></div>
 
     <section class="case-introPart">
 
@@ -37,12 +38,19 @@
                 <!-- Left Column - Context -->
                 <div class="context-column">
                     <h3>Context.</h3>
-                    <p>When my cat fell ill, I faced difficulties finding a trustworthy vet as an international student in Canada. Through consultations with nearly ten pet owners, I discovered this was a widespread issue. Many struggled to find reliable pet care, and those with established vets often faced appointment delays during emergencies.
+                    <p>When my cat fell ill, I faced difficulties finding a trustworthy vet as an international student
+                        in Canada. Through consultations with nearly ten pet owners, I discovered this was a widespread
+                        issue. Many struggled to find reliable pet care, and those with established vets often faced
+                        appointment delays during emergencies.
                     </p>
-                    <p>Therefore, I took the initiative and designed PetHood under these circumstances. I gathered five interested designers and led the project as the Team Leader and Project Initiator. My roles included conducting user and market research, designing low-fidelity interfaces, prototyping interactions, and testing user flows.
+                    <p>Therefore, I took the initiative and designed PetHood under these circumstances. I gathered five
+                        interested designers and led the project as the Team Leader and Project Initiator. My roles
+                        included conducting user and market research, designing low-fidelity interfaces, prototyping
+                        interactions, and testing user flows.
 
                     </p>
-                    <p>In the end, PetHood was recognized for addressing a crucial need, emphasizing the importance of accessible and reliable pet healthcare.
+                    <p>In the end, PetHood was recognized for addressing a crucial need, emphasizing the importance of
+                        accessible and reliable pet healthcare.
                     </p>
                 </div>
 
@@ -56,7 +64,8 @@
                     <div class="info-item">
                         <div class="info-label">My Impacts</div>
                         <div class="info-content">
-                            Meeting organization, Progress planning, User research, Competitive analysis, User testing, Feature design
+                            Meeting organization, Progress planning, User research, Competitive analysis, User testing,
+                            Feature design
                         </div>
                     </div>
 
@@ -86,76 +95,290 @@
     </section>
 
 
-    <div class="case-study-container">
+    <!-- For full-width images: -->
+    <!-- <div class="content-card">
+        <h2 class="section-title">Market Opportunity</h2>
+        <div class="card-image">
+            <img src="path-to-your-image.jpg" alt="Market analysis visualization">
+        </div>
+        <p class="section-text">The pet care industry has seen significant growth...</p>
+    </div> -->
 
+    <!-- For side-by-side text and image:
+
+    <div class="content-card">
+        <div class="card-grid">
+            <div class="card-grid">
+
+                <div>
+                    <h2 class="section-title">User Testing</h2>
+                    <p class="section-text">We conducted thorough usability testing...</p>
+                </div>
+                <div class="card-image">
+                    <img src="path-to-your-image.jpg" alt="User testing session">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- 在 case-study-container 内部 -->
+    <div class="case-study-container">
         <div class="content-section">
             <!-- Overview -->
-            <section id="overview" class="content-card overview-section">
-                <div class="section-label">OVERVIEW</div>
-                <div class="section-text">
-                    PetHood - A One-Stop Solution for Your Pet's Health. Connect with authorized veterinarians and get
-                    professional advice, information, and expert explanations on various pet diseases.
+            <section id="overview" class="chapter-section">
+                <div class="chapter-header">
+                    <div class="chapter-label">OVERVIEW</div>
+                    <p class="section-text">
+                        As pet owners, we've all experienced that midnight anxiety when our pets aren't feeling well and
+                        we
+                        can't find a vet to consult. PetHood was born to solve this problem - an app that helps pet
+                        owners
+                        connect with veterinarians whenever they need to.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Problem & Solution -->
+            <section id="problem-solution" class="chapter-section">
+                <div class="chapter-header">
+                    <div class="chapter-label">PROBLEM & SOLUTION</div>
+                    <h2 class="section-title">Why This Topic?</h2>
+                    <p class="section-text">To be honest, the inspiration came from our own experiences. Almost everyone
+                        on
+                        our team has pets, and we often find ourselves in our group chat asking: "My dog seems down
+                        today, should I take him to the vet?" or "What should I do about my picky-eating cat?"
+                        <br>One day it hit us - hey, why not turn this into our project?
+                    </p>
+                </div>
+                <div class="content-card">
+                    <h2 class="section-title">Market Opportunity</h2>
+                    <p class="section-text">The pet care industry has seen significant growth, particularly during the
+                        pandemic when pet ownership surged dramatically. We've observed a growing demand for pet
+                        healthcare services, yet many people still struggle to access veterinary care when they need it
+                        most. This gap in the market presented a clear opportunity for innovation.
+                    </p>
+                    <h2 class="section-title">Our Solution</h2>
+                    <p class="section-text">PetHood provides a comprehensive platform that enables pet owners to consult
+                        veterinarians at any hour, schedule appointments through their phones, and learn from the
+                        experiences of other pet owners. This integrated approach addresses the key pain points we
+                        identified in the current pet healthcare system.
+                    </p>
+                </div>
+            </section>
+
+            <!-- User Research -->
+            <section id="user-research" class="chapter-section">
+                <div class="chapter-header">
+                    <div class="chapter-label">USER RESEARCH</div>
+                    <h2 class="chapter-title">"How can we help users quickly identify trustworthy veterinarians during
+                        urgent situations?"</h2>
+                </div>
+                <div class="content-card">
+                    <div class="card-grid">
+                        <div class="text-content">
+                            <div class="section-label">THE DESIGN PROCESS</div>
+
+                            <h2 class="section-title">Validating Our Direction</h2>
+
+                            <p class="section-text">Initially, we weren't certain about the exact direction for our
+                                project.</p>
+
+                            <p class="section-text">Our brainstorming sessions yielded several potential focuses: pet
+                                health consultation, pet boarding services, pet-friendly housing information, and a pet
+                                owner community platform.</p>
+
+                            <p class="section-text">To validate these ideas, we conducted an online survey that garnered
+                                over 80 responses. The results were compelling, with 90% of respondents identifying pet
+                                health consultation as their primary concern, which strongly validated our chosen
+                                direction.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="./PetHood-imgs/online-survey.png" alt="User testing session">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="content-card">
+                    <h2 class="section-title">In-Depth Interviews</h2>
+                    <p class="section-text">Following the survey, we conducted detailed interviews with 11 respondents,
+                        each lasting 15-20 minutes. These conversations explored their biggest challenges when pets get
+                        sick, pain points in accessing veterinary care, and their vision of an ideal pet healthcare
+                        service.
+                    </p>
+                </div>
+
+                <div class="chapter-header">
+                    <div class="chapter-label">USER PERSONAS</div>
+                    <p class="section-text">Our research revealed three distinct user types:
+                    </p>
+
+                </div>
+
+                <div class="content-card image-bottom"> <!-- 添加 image-bottom 类 -->
+                    <div class="card-grid">
+                        <div class="text-content">
+                            <div class="section-label">PERSONA 1</div>
+                            <h2 class="section-title">The Nervous Newbie</h2>
+                            <p class="section-text">Typically a first-time pet owner who constantly worries about their
+                                pet's wellbeing, feels overwhelmed by online information, and needs reliable guidance.
+                            </p>
+                        </div>
+                        <div class="card-image">
+                            <img src="./PetHood-imgs/P1.png" alt="Nervous Newbie Persona">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card image-bottom"> <!-- 添加 image-bottom 类 -->
+                    <div class="card-grid">
+                        <div class="text-content">
+                            <div class="section-label">PERSONA 2</div>
+                            <h2 class="section-title">The Experienced Pet Parent</h2>
+                            <p class="section-text">Maintains a relationship with a regular vet but faces availability
+                                issues. These users value convenience and reliability, and often struggle when needing
+                                to switch veterinarians.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="./PetHood-imgs/p2.png" alt="Experienced Pet Parent Persona">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card image-bottom">
+                    <div class="card-grid">
+                        <div class="text-content">
+                            <div class="section-label">PERSONA 3</div>
+                            <h2 class="section-title">The Exotic Pet Owner</h2>
+                            <p class="section-text">Those with hamsters, lizards, and other unusual pets. These owners
+                                face particular difficulties in finding knowledgeable veterinarians and reliable
+                                information for their specific pets.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="./PetHood-imgs/p3.png" alt="Exotic Pet Owner Persona">
+                        </div>
+                    </div>
                 </div>
 
             </section>
 
-            <!-- Problem -->
-            <section id="problem-solution" class="content-card">
-                <div class="card-split">
-                    <div class="card-content">
-                        <div class="section-label">PROBLEM</div>
-                        <h2 class="section-title">Restrictive policy leading to credit card rejections</h2>
-                        <div class="section-text">
-                            Over 37,000 credit card rejections were reported by Navan users—business travelers who found
-                            their Navan business credit cards unusable due to company policies that only activate travel
-                            cards for trips involving flights or hotel bookings.
+            <!-- Competitor Analysis -->
+            <section id="competitor-analysis" class="chapter-section">
+                <div class="chapter-header">
+                    <div class="chapter-label">COMPETITOR ANALYSIS</div>
+                </div>
+                <div class="content-card">
+                    <div class="card-grid">
+                        <div class="text-content">
+                            <p class="section-text"><br>Our examination of existing pet health applications in North America
+                                revealed significant gaps in service offerings. </br>
+                                Current solutions typically offer
+                                limited
+                                features, rarely provide emergency consultation services, and almost never cater to
+                                exotic pet
+                                owners. This analysis confirmed that our comprehensive approach would fill a crucial
+                                market
+                                need.
+                            </p>
                         </div>
-                        <div class="subsection-title">WHY IS THIS IMPORTANT?</div>
-                        <div class="section-text">
-                            This restriction was particularly problematic for travelers on short trips without such
-                            bookings, often leading to embarrassing card declines and subsequent reimbursement hassles.
+                        <div class="card-image">
+                            <img src="./PetHood-imgs/comp.png" alt="Exotic Pet Owner Persona">
                         </div>
-                    </div>
-                    <div class="card-image">
-                        <img src="path-to-card-image.png" alt="Navan Card Decline Interface">
                     </div>
                 </div>
             </section>
 
-            <!-- Additional sections follow the same pattern -->
-            <section id="user-challenge" class="content-card">
-                <div class="section-label">USER CHALLENGE</div>
-                <!-- Add content -->
+            <!-- Ideation -->
+            <section id="ideation" class="chapter-section">
+                <div class="chapter-header">
+                    <div class="chapter-label">IDEATION</div>
+                </div>
+                <div class="content-card">
+                    <h2 class="section-title">Design Process</h2>
+                    <div class="section-text">
+                        <p>Through comprehensive user research and market analysis, we identified the most critical user
+                            need: instant access to trusted veterinary care, especially during emergencies.</p>
+
+                        <div class="feature-card">
+                            <h3 class="feature-title">Immediate Professional Support</h3>
+                            <p>"Connecting pet owners with trusted vets anytime, anywhere"</p>
+                            <p>Our primary solution enables instant video consultations for emergencies, scheduled
+                                check-ups, and maintains comprehensive consultation records for continued care.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <h3 class="feature-title">Community Knowledge Sharing</h3>
+                            <p>"Building a knowledgeable and supportive pet care community"</p>
+                            <p>A curated space where verified veterinarians share expert knowledge and pet owners
+                                exchange valuable experiences.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section id="technical-challenge" class="content-card">
-                <div class="section-label">TECHNICAL CHALLENGE</div>
-                <!-- Add content -->
+
+            <!-- Testing & Iteration -->
+            <section id="testing-iteration" class="chapter-section">
+                <div class="chapter-header">
+                    <div class="chapter-label">TESTING & ITERATION</div>
+                </div>
+                <div class="content-card">
+                    <h2 class="section-title">User Testing</h2>
+                    <div class="section-text">
+                        <p>We conducted thorough usability testing with seven previous interviewees, each dedicating
+                            15-20 minutes to explore the platform. Their testing focused on navigation and feature
+                            discovery, the vet booking process, and interaction within the community forum.</p>
+                        <br>
+                        <h3>Rating System</h3>
+                        <p>After careful consideration, we implemented a five-star rating system instead of a simple
+                            like/dislike mechanism. This decision provides more detailed vet service feedback, helps
+                            users make informed choices, and makes good vets more discoverable.</p>
+                        <br>
+                        <h3>Navigation Design</h3>
+                        <p>We prioritized intuitive navigation by placing the back button consistently in the top-left
+                            corner of every screen, making the interface immediately familiar to users while ensuring
+                            easy and natural navigation throughout the app.</p>
+                    </div>
+                </div>
             </section>
 
-            <section id="business-challenge" class="content-card">
-                <div class="section-label">BUSINESS CHALLENGE</div>
-                <!-- Add content -->
+            <!-- Final Designs -->
+            <section id="final-designs" class="chapter-section">
+                <div class="chapter-header">
+                    <div class="chapter-label">FINAL DESIGNS</div>
+                </div>
+                <div class="content-card">
+                    <h2 class="section-title">Final Product</h2>
+                    <div class="section-text">
+                        <p>Our final design embodies a professional yet welcoming aesthetic that balances urgency with
+                            reassurance. The interface prioritizes quick access to emergency care while maintaining
+                            intuitive navigation for all features.</p>
+                        <p>Key design decisions include a prominent emergency help button, a comprehensive five-star
+                            rating system for veterinarians, and clear information hierarchy that guides users
+                            efficiently to their desired actions.</p>
+                    </div>
+                </div>
             </section>
 
-            <section id="result" class="content-card">
-                <div class="section-label">RESULT</div>
-                <!-- Add content -->
-            </section>
-
-            <section id="next-steps" class="content-card">
-                <div class="section-label">NEXT STEPS</div>
-                <!-- Add content -->
-            </section>
-
-            <section id="learnings" class="content-card">
-                <div class="section-label">LEARNINGS</div>
-                <!-- Add content -->
-            </section>
-
-            <section id="recommendations" class="content-card">
-                <div class="section-label">RECOMMENDATIONS</div>
-                <!-- Add content -->
+            <!-- Learnings -->
+            <section id="learnings" class="chapter-section">
+                <div class="chapter-header">
+                    <div class="chapter-label">LEARNINGS</div>
+                </div>
+                <div class="content-card">
+                    <h2 class="section-title">Key Takeaways</h2>
+                    <div class="section-text">
+                        <p>This project revealed several crucial insights about designing for emergency healthcare
+                            scenarios:</p>
+                        <p>User research challenged our initial assumptions, proving that what we thought users wanted
+                            wasn't always what they needed. Early testing proved invaluable for identifying and
+                            addressing critical issues efficiently.</p>
+                        <p>Looking ahead, we plan to implement medication reminders, comprehensive pet health records,
+                            and deeper integration with local vet clinics. Each enhancement will be guided by our core
+                            mission: making quality veterinary care accessible to all pet owners.</p>
+                    </div>
+                </div>
             </section>
         </div>
 
@@ -163,63 +386,84 @@
             <h3 class="sidebar-title">ON THIS PAGE</h3>
             <nav class="sidebar-nav">
                 <a href="#overview" class="sidebar-link">Overview</a>
-                <a href="#problem-solution" class="sidebar-link">Problem / Solution</a>
-                <a href="#user-challenge" class="sidebar-link">User challenge</a>
-                <a href="#technical-challenge" class="sidebar-link">Technical challenge</a>
-                <a href="#business-challenge" class="sidebar-link">Business challenge</a>
-                <a href="#result" class="sidebar-link">Result</a>
-                <a href="#next-steps" class="sidebar-link">Next steps</a>
+                <a href="#problem-solution" class="sidebar-link">Problem & Solution</a>
+                <a href="#user-research" class="sidebar-link">User Research</a>
+                <a href="#competitor-analysis" class="sidebar-link">Competitor Analysis</a>
+                <a href="#ideation" class="sidebar-link">Ideation</a>
+                <a href="#testing-iteration" class="sidebar-link">Testing & Iteration</a>
+                <a href="#final-designs" class="sidebar-link">Final Designs</a>
                 <a href="#learnings" class="sidebar-link">Learnings</a>
-                <a href="#recommendations" class="sidebar-link">Recommendations</a>
             </nav>
         </div>
-
     </div>
 
+    <footer class="footer">
+
+        <div class="footer-container">
+            <div class="intro">
+                <p class="first-line">I'm a passionate creative eager to explore internships, contract roles,
+                    freelance
+                    projects, or any exciting opportunities.</p>
+                <p class="second-line">With a keen eye for detail and a drive to craft impactful experiences, I'm
+                    ready
+                    to bring fresh ideas and energy to your team. <span class="bold-text">Let's connect and make
+                        something extraordinary happen!</span></p>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="./Port-imgs/Switch.svg" alt="Game console icon">
+                    <span>Copyright © 2024 Rongxue Jiang</span>
+                </div>
+
+                <div class="footer-right">
+                    <a href="/path/to/resume.pdf" class="footer-btn" target="_blank">
+                        <img src="./Port-imgs/F01.png" alt="">
+                        Resume
+                    </a>
+                    <a href="https://linkedin.com/in/your-linkedin" class="footer-btn" target="_blank">
+                        <img src="./Port-imgs/F02.png" alt="">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-to-top">
+            <a class="one-love-button" id="backtotop" href="#top">
+                <span>Top ↑</span>
+            </a>
+            <div class="backtotop-shyguy">
+                <img src="./Port-imgs/kirby-rocket-v1.png" alt="">
+            </div>
+        </div>
+
+    </footer>
+
+
     <script>
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.sidebar-link');
+        document.getElementById('backtotop').addEventListener('click', (e) => {
+            e.preventDefault();
+            const img = document.querySelector('.backtotop-shyguy img');
+            img.classList.add('flying');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        };
+            setTimeout(() => {
+                img.classList.add('flyingSide');
+            }, 1000);
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const activeId = entry.target.id;
-                    updateActiveLink(activeId);
-                }
-            });
-        }, observerOptions);
+            setTimeout(() => {
+                img.classList.remove('flying');
+                img.classList.remove('flyingSide');
+            }, 5000);
 
-        sections.forEach(section => observer.observe(section));
+            //         document.querySelector(link.getAttribute("href")).scrollIntoView({
+            //   behavior: "smooth",
+            // });
 
-        function updateActiveLink(activeId) {
-            navLinks.forEach(link => {
-                const href = link.getAttribute('href').substring(1);
-                if (href === activeId) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        }
 
-        // Smooth scroll
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
         });
     </script>
-
 
 </body>
 
