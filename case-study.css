@@ -415,3 +415,131 @@ z-index: 1;
         font-size: 2.5rem;
     }
 }
+
+/* final deisgn */
+
+.feature-demos {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.feature-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.feature-showcase.reverse {
+    direction: rtl;
+}
+
+.feature-showcase.reverse .feature-content {
+    direction: ltr;
+}
+
+.feature-content {
+    padding: 2rem;
+}
+
+.feature-content h3 {
+    font-family: "SF Pro Rounded Medium", sans-serif;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+}
+
+.feature-content p {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    font-size: var(--font-size-subhead);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-secondary);
+}
+
+.feature-highlights {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-highlights li {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    font-size: var(--font-size-subhead);
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.feature-highlights li:before {
+    content: "•";
+    color: var(--color-accent-purple-deep);
+    position: absolute;
+    left: 0;
+}
+
+.feature-demo {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feature-demo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.design-summary {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border-gray-light);
+}
+
+.design-summary h3 {
+    font-family: "SF Pro Rounded Medium", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
+}
+
+.decision-list {
+    list-style: none;
+    padding: 0;
+}
+
+.decision-list li {
+    font-family: "SF Pro Rounded Regular", sans-serif;
+    font-size: var(--font-size-subhead);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.decision-list li:before {
+    content: "→";
+    color: var(--color-accent-purple-deep);
+    position: absolute;
+    left: 0;
+}
+
+.decision-list li strong {
+    color: var(--color-text-primary);
+    font-family: "SF Pro Rounded Medium", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .feature-showcase {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .feature-content {
+        padding: 1rem;
+    }
+
+    .feature-showcase.reverse {
+        direction: ltr;
+    }
+}
